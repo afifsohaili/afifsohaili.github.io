@@ -5,18 +5,7 @@
         <ProfileSidebar />
       </div>
       <div class="column">
-        <div class="section">
-          Summary
-        </div>
-        <div class="section">
-          Professional Experience
-        </div>
-        <div class="section">
-          Leadership Experience
-        </div>
-        <div class="section">
-          Projects
-        </div>
+        <ProfileSummary />
         <div class="section">
           Presentations
         </div>
@@ -27,9 +16,11 @@
 
 <script>
 import ProfileSidebar from '~/components/ProfileSidebar'
+import ProfileSummary from '~/components/ProfileSummary'
 
 export default {
   components: {
+    ProfileSummary,
     ProfileSidebar
   }
 }
