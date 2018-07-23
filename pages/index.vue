@@ -6,6 +6,7 @@
       </div>
       <div class="column">
         <ProfileSummary />
+        <ProfessionalExperience />
         <div class="section">
           Presentations
         </div>
@@ -17,9 +18,11 @@
 <script>
 import ProfileSidebar from '~/components/ProfileSidebar'
 import ProfileSummary from '~/components/ProfileSummary'
+import ProfessionalExperience from '~/components/ProfessionalExperience'
 
 export default {
   components: {
+    ProfessionalExperience,
     ProfileSummary,
     ProfileSidebar
   }
