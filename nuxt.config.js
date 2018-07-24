@@ -1,3 +1,7 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: { base: '/afifsohaili.github.io/' }
+} : {}
+
 module.exports = {
   head: {
     title: 'Afif Sohaili | A Web Developer based in Malaysia',
@@ -29,5 +33,6 @@ module.exports = {
   },
   modules: [
     'nuxt-buefy',
-  ]
+  ],
+  ...routerBase
 }
