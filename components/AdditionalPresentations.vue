@@ -1,10 +1,10 @@
 <template>
-  <div class="section">
+  <div class="content">
     <h3 class="title is-4">
       Presentations
     </h3>
     <VideoBox url="https://www.youtube-nocookie.com/embed/_femHvk47IQ?rel=0">
-      <div class="section content">
+      <div class="section video-content">
         <h4>Build Real-time Chat App with Nuxt.js and FeathersJS</h4>
         <p>
           My own tutorial working with Nuxt.js (a frontend framework), connected to a backend system built using FeathersJS and bridged with Socket.io for real-time connectivity
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style scoped>
-.content {
+.video-content {
   border-top: 1px solid #e5e5e5;
 }
 </style>

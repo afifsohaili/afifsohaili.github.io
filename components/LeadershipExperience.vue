@@ -1,5 +1,5 @@
 <template>
-  <div class="section is-medium">
+  <div class="content">
     <h3 class="title is-4">
       Leadership Experience
     </h3>

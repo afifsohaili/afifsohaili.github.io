@@ -1,5 +1,5 @@
 <template>
-  <div class="section is-medium">
+  <div class="content">
     <h3 class="title is-4">
       Professional Experience
     </h3>
@@ -61,19 +61,4 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  list-style-position: inside;
-  margin-left: 1.5rem;
-  position: relative;
-}
-
-ul li:before {
-  content: '\0398';
-  left: -1.5rem;
-  position: absolute;
-}
-
-ul ul {
-  margin-left: 1.5rem;
-}
 </style>

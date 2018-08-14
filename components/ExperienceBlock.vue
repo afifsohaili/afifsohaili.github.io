@@ -31,21 +31,5 @@ em {
   border-radius: 6px;
   border: 1px solid #e5e5e5;
   padding: 1rem;
-
-  ul {
-    list-style-position: inside;
-    margin-left: 1.5rem;
-    position: relative;
-  }
-
-  ul li:before {
-    content: '\0398';
-    left: -1.5rem;
-    position: absolute;
-  }
-
-  ul ul {
-    margin-left: 1.5rem;
-  }
 }
 </style>

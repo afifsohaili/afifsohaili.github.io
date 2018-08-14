@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="content">
     <h3 class="title is-4">
       Projects
     </h3>

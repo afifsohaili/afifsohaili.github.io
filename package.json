@@ -5,7 +5,7 @@
   "author": "Afif Sohaili <afifnajib@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "PORT=4999 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

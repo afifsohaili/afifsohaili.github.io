@@ -4,7 +4,7 @@
       <div class="column is-3">
         <profile-sidebar />
       </div>
-      <div class="column">
+      <div class="column is-offset-1 is-8">
         <profile-summary />
         <professional-experience />
         <leadership-experience />
