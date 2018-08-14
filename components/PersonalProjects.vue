@@ -43,12 +43,12 @@ export default {
         {
           name: 'Munying Aquaculture',
           url: 'https://munyingaquaculture.com',
-          stacks: ['MeteorJS', 'MongoDB', 'Nginx', 'Hosted on DigitalOcean']
+          stacks: ['MeteorJS', 'MongoDB', 'Nginx', 'Hosted on Vultr']
         },
         {
           name: 'Syaf Armada Recruitment',
           url: 'https://syafrecruitment.com',
-          stacks: ['MeteorJS', 'MongoDB', 'Nginx', 'Hosted on DigitalOcean']
+          stacks: ['MeteorJS', 'MongoDB', 'Nginx', 'Hosted on Linode']
         },
         {
           name: 'Saranira',
