@@ -31,5 +31,6 @@ em {
   border-radius: 6px;
   border: 1px solid #e5e5e5;
   padding: 1rem;
+  background: rgba(255, 255, 255, 0.43);
 }
 </style>

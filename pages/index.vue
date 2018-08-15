@@ -5,7 +5,6 @@
         <profile-sidebar />
       </div>
       <div class="column is-offset-1 is-8">
-        <profile-summary />
         <professional-experience />
         <leadership-experience />
         <personal-projects />
@@ -17,7 +16,6 @@
 
 <script>
 import ProfileSidebar from '~/components/ProfileSidebar'
-import ProfileSummary from '~/components/ProfileSummary'
 import ProfessionalExperience from '~/components/ProfessionalExperience'
 import LeadershipExperience from '~/components/LeadershipExperience'
 import PersonalProjects from '~/components/PersonalProjects'
@@ -28,7 +26,6 @@ export default {
     AdditionalPresentations,
     LeadershipExperience,
     ProfessionalExperience,
-    ProfileSummary,
     PersonalProjects,
     ProfileSidebar
   }
