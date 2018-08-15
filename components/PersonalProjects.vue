@@ -5,8 +5,8 @@
     </h3>
     <div class="is-flex">
       <ExperienceBlock
-        v-for="(project, index) in projects"
-        :class="index < 2 ? 'is-marginless' : ''"
+        v-for="project in projects"
+        class="project"
         :company-name="project.name"
         :period="project.decommissioned ? 'Decommissioned' : undefined"
         :key="project.name">
@@ -73,12 +73,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.project {
+  &:first-child {
+    @media only screen and (max-width: 600px) {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-child(2) {
+    @media only screen and (min-width: 600px) {
+      margin-top: 0
+    }
+  }
+}
+
 .is-flex {
   flex-wrap: wrap;
   justify-content: space-between;
 
+
   .experience-block {
-    flex-basis: calc(50% - 1rem);
+    width: calc(50% - 1rem);
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 }
 
