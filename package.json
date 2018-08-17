@@ -14,6 +14,8 @@
     "deploy": "DEPLOY_ENV=GH_PAGES nuxt generate && gh-pages -d dist -t -p 10 -b master -m"
   },
   "dependencies": {
+    "animejs": "^2.2.0",
+    "chance": "^1.0.16",
     "nuxt": "^1.0.0",
     "nuxt-buefy": "^0.1.0"
   },
