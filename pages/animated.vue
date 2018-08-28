@@ -787,12 +787,19 @@ export default {
       })
       .add({
         targets: '#face-path polygon',
+        'stroke-width': 3,
+        delay: function(el, i) { return i * 10 },
+        duration: 50,
+        offset: '-=3500'
+      })
+      .add({
+        targets: '#face-path polygon',
         rotate: (el) => {
           return chance.natural({max: 360})
         },
         delay: function(el, i) { return i * chance.floating({min: 0, max: 3}) },
         duration: 1000,
-        offset: '-=1500'
+        offset: '-=3500'
       })
       .add({
         targets: '#face-path polygon',
