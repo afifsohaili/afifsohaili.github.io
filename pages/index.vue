@@ -763,19 +763,21 @@
       <polygon points="815,482 833,503 838,445"/>
     </svg>
     <section class="container">
-      <div class="resume" v-if="showResume">
-        <div class="columns">
-          <div class="column is-3">
-            <profile-sidebar />
-          </div>
-          <div class="column is-offset-1 is-8">
-            <professional-experience />
-            <leadership-experience />
-            <personal-projects />
-            <additional-presentations />
+      <transition name="resume">
+        <div class="resume" v-if="showResume">
+          <div class="columns">
+            <div class="column is-3">
+              <profile-sidebar />
+            </div>
+            <div class="column is-offset-1 is-8">
+              <professional-experience />
+              <leadership-experience />
+              <personal-projects />
+              <additional-presentations />
+            </div>
           </div>
         </div>
-      </div>
+      </transition>
     </section>
   </div>
 </template>
@@ -856,6 +858,22 @@ export default {
 <style scoped>
 .container {
   margin-top: 4rem;
+}
+
+.resume-enter,
+.resume-leave-to {
+  opacity: 0;
+}
+
+.resume-enter-active,
+.resume-leave-active {
+  transition: opacity 0.7s ease-out;
+  transition-delay: 1s;
+}
+
+.resume-enter-to,
+.resume-leave {
+  opacity: 1;
 }
 
 svg {
