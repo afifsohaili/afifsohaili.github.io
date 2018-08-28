@@ -1,6 +1,6 @@
 <template>
   <div>
-    <svg viewBox="0 0 917 1412" xmlns="http://www.w3.org/2000/svg" width="31%" id="face-path" v-if="!showResume">
+    <svg viewBox="0 0 917 1412" xmlns="http://www.w3.org/2000/svg" width="31%" id="face-path" v-if="!showResume" :style="{opacity: showSvg}">
       <polygon points="71,387 83,362 86,385"/>
       <polygon points="71,387 71,418 86,385"/>
       <polygon points="71,418 86,440 118,393"/>
@@ -804,7 +804,10 @@ export default {
     ProfileSidebar
   },
   data () {
-    return {showResume: false}
+    return {
+      showSvg: '0',
+      showResume: false
+    }
   },
   mounted () {
     const timeline = anime.timeline({
@@ -849,7 +852,21 @@ export default {
         delay: function(el, i) { return i * chance.floating({min: 0, max: 3}) },
         duration: 1000,
         offset: '-=3500'
+      }).
+      add({
+        points: (el) => {
+          const {points} = el
+          return Array(points.length).fill().map((_, i) => {
+            const newX = (points[i].x)
+            const newY = (points[i].y + 3000)
+
+            return [newX, newY].join(',')
+          }).join(' ')
+        },
+        delay: function(el, i) { return i * chance.floating({min: 0, max: 2}) },
+        duration: 400
       })
+    setTimeout(() => this.showSvg = '1', 200)
     timeline.complete = () => this.showResume = true
   }
 }
