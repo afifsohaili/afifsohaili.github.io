@@ -1,6 +1,6 @@
 <template>
   <div>
-    <svg viewBox="0 0 917 1412" xmlns="http://www.w3.org/2000/svg" width="29%" id="face-path" v-if="!showResume">
+    <svg viewBox="0 0 917 1412" xmlns="http://www.w3.org/2000/svg" width="31%" id="face-path" v-if="!showResume">
       <polygon points="71,387 83,362 86,385"/>
       <polygon points="71,387 71,418 86,385"/>
       <polygon points="71,418 86,440 118,393"/>

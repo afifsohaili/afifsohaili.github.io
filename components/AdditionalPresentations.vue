@@ -29,6 +29,6 @@ export default {
 
 <style scoped>
 .video-content {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #bdbdbd;
 }
 </style>
