@@ -705,6 +705,7 @@
 <script>
 import anime from 'animejs'
 import Chance from 'chance'
+import geometry from 'triangle-vector-geometry'
 
 import ProfileSidebar from '~/components/ProfileSidebar'
 import ProfessionalExperience from '~/components/ProfessionalExperience'
@@ -747,33 +748,26 @@ export default {
         'stroke-width': 2.5,
         delay: function(el, i) { return i * 10 },
         duration: 50,
-        offset: '-=1500'
-      })
-      .add({
-        targets: '#face-path polygon',
-        points: (el) => {
-          const {points} = el
-          return Array(points.length).fill().map((_, i) => {
-            const newX = (points[i].x * 0.67)
-            const newY = (points[i].y * 0.67)
-
-            return [newX, newY].join(',')
-          }).join(' ')
-        },
-        delay: function(el, i) { return i * chance.floating({min: 0, max: 3}) },
-        duration: 1000,
-        offset: '-=3500'
+        offset: '-=2000'
       })
       .add({
         targets: '#face-path polygon',
         rotate: (el) => {
+          const [c1, c2, c3] = Array(el.points.length).fill().map((_, i) => {
+            const x = (el.points[i].x)
+            const y = (el.points[i].y)
+
+            return [x, y]
+          })
+          const centroid = geometry.centroid(c1, c2, c3)
+          el.style.transformOrigin = centroid.map(p => `${p - 50}px`).join(' ')
           return chance.natural({max: 360})
         },
         delay: function(el, i) { return i * chance.floating({min: 0, max: 3}) },
-        duration: 1000,
+        duration: 5000,
         offset: '-=3500'
-      }).
-      add({
+      })
+      .add({
         points: (el) => {
           const {points} = el
           return Array(points.length).fill().map((_, i) => {
@@ -785,7 +779,7 @@ export default {
         },
         delay: function(el, i) { return i * chance.floating({min: 0, max: 2}) },
         duration: 400,
-        offset: '-=500'
+        offset: '-=3500'
       })
     setTimeout(() => this.showSvg = '1', 200)
     timeline.complete = () => this.showResume = true
@@ -845,7 +839,6 @@ polygon {
   stroke-width: 1;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transform-origin: center;
 }
 
 img {

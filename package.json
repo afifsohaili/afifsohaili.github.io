@@ -19,7 +19,8 @@
     "animejs": "^2.2.0",
     "chance": "^1.0.16",
     "nuxt": "^1.0.0",
-    "nuxt-buefy": "^0.1.0"
+    "nuxt-buefy": "^0.1.0",
+    "triangle-vector-geometry": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
