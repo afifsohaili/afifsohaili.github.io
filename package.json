@@ -11,7 +11,9 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "deploy": "DEPLOY_ENV=GH_PAGES nuxt generate && gh-pages -d dist -t -p 10 -b master -m"
+    "deploy:github": "DEPLOY_ENV=GH_PAGES nuxt generate && gh-pages -d dist -t -p 10 -b master -m",
+    "deploy:surge": "nuxt generate && surge ./dist afifsohaili.com",
+    "deploy": "yarn run deploy:surge && yarn run deploy:github"
   },
   "dependencies": {
     "animejs": "^2.2.0",
