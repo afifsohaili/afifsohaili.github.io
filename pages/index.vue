@@ -752,6 +752,7 @@ export default {
       })
       .add({
         targets: '#face-path polygon',
+        easing: 'easeInOutBack',
         rotate: (el) => {
           const [c1, c2, c3] = Array(el.points.length).fill().map((_, i) => {
             const x = (el.points[i].x)
@@ -760,11 +761,12 @@ export default {
             return [x, y]
           })
           const centroid = geometry.centroid(c1, c2, c3)
-          el.style.transformOrigin = centroid.map(p => `${p - 50}px`).join(' ')
+          el.style.transformOrigin = centroid.map(p => `${p - 150}px`).join(' ')
           return chance.natural({max: 360})
         },
+        translateY: chance.natural({max: 1500}),
         delay: function(el, i) { return i * chance.floating({min: 0, max: 3}) },
-        duration: 5000,
+        duration: 3500,
         offset: '-=3500'
       })
       .add({
